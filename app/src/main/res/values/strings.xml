@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Restaurant</string>
+    <string name="open_menu">Open Menu</string>
+    <string name="no_item_selected">No Item Selected</string>
+    <string-array name="menu_type">
+        <item>Breakfast</item>
+        <item>Lunch</item>
+        <item>Dinner</item>
+    </string-array>
+</resources>
