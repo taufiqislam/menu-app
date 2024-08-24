@@ -17,7 +17,7 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity {
 
     //Button menuButton = findViewById(R.id.seekButton);
-    private FoodExpert expert = new FoodExpert();
+    private DeviceExpert expert = new DeviceExpert();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,15 +28,15 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void menuHandler(View view) {
-        Spinner menuSpinner = findViewById(R.id.mealSpinner);
+        Spinner menuSpinner = findViewById(R.id.deviceSpinner);
         TextView menu = findViewById(R.id.menuTextView);
-        String meal = String.valueOf(menuSpinner.getSelectedItem());
-        List<String> menuList = expert.getFoods(meal);
-        StringBuilder foodsFormatted = new StringBuilder();
-        for(String food : menuList)
+        String device = String.valueOf(menuSpinner.getSelectedItem());
+        List<String> menuList = expert.getDevices(device);
+        StringBuilder devicesFormatted = new StringBuilder();
+        for(String item : menuList)
         {
-            foodsFormatted.append(food).append('\n');
+            devicesFormatted.append(item).append('\n');
         }
-        menu.setText(foodsFormatted);
+        menu.setText(devicesFormatted);
     }
 }
